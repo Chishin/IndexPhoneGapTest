@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p>早安</p>
+<script type="text/javascript">
+function AlertIt(){
+	//亂數
+	var myrandom = Math .round(Math.random()*2)
+	//用矩陣Array
+	var messages = new Array()
+	messages[0]="紅豆餅"
+	messages[1]="煎餃"
+	messages[2]="蘿蔔糕"
+	//連結清單
+	var links = new Array()
+	links[0]="http://goo.gl/UMa9LV"
+	links[1]="http://goo.gl/syU87B"
+	links[2]="http://goo.gl/mKk3Dc"
+	links[3]="http://google.com"
+	//呼叫確認識窗
+	var answer = confirm(messages[myrandom])
+	//如果點「是」，就連去該變數所指的網站
+	if(answer){
+	window.location = links[myrandom]
+	} else if(!answer){
+	window.location = links[3]
+	}
+		
+}
+</script>
+<table width="100%"  height = "100%" border="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="middle"><blockquote>
+      <p><a href="javascript:AlertIt();"><img src = "早餐.jpg" width = "65%" height = "auto"></a></p>
+      <p><a href="javascript:AlertIt();">想吃什麼</a></p>
+    </blockquote></td>
+  </tr>
+</table>
+
+</body>
+</html>
